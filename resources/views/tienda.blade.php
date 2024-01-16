@@ -8,5 +8,5 @@
 
 
 @section('contenido')
-    Nuestra tienda
+   Nuetsra tienda virtual
 @endsection
