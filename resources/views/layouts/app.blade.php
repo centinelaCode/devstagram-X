@@ -3,8 +3,10 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="{{ asset('css/app.css') }}">
       @vite('resources/css/app.css')
       <title>Devstagram - @yield('titulo')</title>
+      <script src="{{ asset('js/app.js') }}"></script>
 
    </head>
    <body class="bg-gray-100">
@@ -28,7 +30,7 @@
       </main>
 
 
-      <footer class="text-center p-5 text-gray-500 font-bold">
+      <footer class="text-center p-5 mt-5 text-gray-500 font-bold">
          Devstagram - Todos los derecho reservados {{ now()->year }}
       </footer>
 
