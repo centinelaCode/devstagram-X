@@ -3,10 +3,10 @@
 
 
 @section('titulo')
-    Página Principal
+   Página Principal
 @endsection
 
 
 @section('contenido')
-    Contenido de esta sección
+   Contenid Principal
 @endsection
