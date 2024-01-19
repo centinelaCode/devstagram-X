@@ -40,6 +40,7 @@
                   type="text"
                   placeholder="Tu Nombre de Usuario"
                   class="border p-3 w-full rounded-lg @error('username') border-red-500 @enderror"
+                  value={{ old('username') }}
                >
                @error('username')
                   <p class="text-red-600 font-bold text-sm my-3">
@@ -56,6 +57,7 @@
                   type="email"
                   placeholder="Tu Email de Registro"
                   class="border p-3 w-full rounded-lg @error('email') border-red-500 @enderror"
+                  value={{ old('email') }}
                >
                @error('email')
                   <p class="text-red-600 font-bold text-sm my-3">
