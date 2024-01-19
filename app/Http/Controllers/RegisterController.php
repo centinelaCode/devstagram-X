@@ -34,7 +34,8 @@ class RegisterController extends Controller
          'password' => $request->password
       ]);
 
-      // redireccionar
+      // redireccionar al muro
+      return redirect()->route('posts.index');
 
    }
 }
