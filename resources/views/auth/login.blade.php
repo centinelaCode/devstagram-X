@@ -15,6 +15,12 @@
          <form action="{{ route('login') }}" method="POST" novalidate>
             @csrf
 
+            @if(session('mensaje'))
+               <p class="text-red-600 font-bold text-sm my-3">
+                  {{ session('mensaje') }}
+               </p>
+            @endif
+
             <div class="mb-5">
                <label for="email" class="mb-2 block uppercase text-gray-500 font-bold">Email</label>
                <input
