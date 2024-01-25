@@ -15,12 +15,38 @@
          <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-3xl font-black"><a href="/">Devstagram</a></h1>
 
-            <nav class="flex gap-2 items-center">
-               <a href="#" class="font-bold uppercase text-gray-600 text-sm">Login</a>
-               <a href="{{ route('register') }}" class="font-bold uppercase text-gray-600 text-sm">
-                  Crear Cuenta
-               </a>
-            </nav>
+            {{-- Check si auth  FORMA 1--}}
+            {{-- @if(auth()->user())
+               <p>Autenticado</p>
+            @else
+               <p>No Autenticado</p>
+            @endif --}}
+
+            {{-- Check si auth FORMA 2 --}}
+            {{-- @auth para si esta autenticado --}}
+            @auth
+               <nav class="flex gap-2 items-center">
+                  <a href="#" class="font-bold text-gray-600 text-sm">
+                     Hola, <span class="font-normal">
+                              {{ auth()->user()->username }}
+                           </span>
+                  </a>
+                  <a href="{{ route('register') }}" class="font-bold uppercase text-gray-600 text-sm">
+                     Cerrar Sesión
+                  </a>
+               </nav>
+            @endauth
+
+            {{-- @guess para si NO esta autenticado --}}
+            @guest
+               <nav class="flex gap-2 items-center">
+                  <a href="#" class="font-bold uppercase text-gray-600 text-sm">Login</a>
+                  <a href="{{ route('register') }}" class="font-bold uppercase text-gray-600 text-sm">
+                     Crear Cuenta
+                  </a>
+               </nav>
+            @endguest
+
          </div>
       </header>
 
