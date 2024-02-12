@@ -31,7 +31,7 @@
                               {{ auth()->user()->username }}
                            </span>
                   </a>
-                  <a href="{{ route('register') }}" class="font-bold uppercase text-gray-600 text-sm">
+                  <a href="{{ route('logout') }}" class="font-bold uppercase text-gray-600 text-sm">
                      Cerrar Sesión
                   </a>
                </nav>
