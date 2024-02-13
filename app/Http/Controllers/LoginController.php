@@ -15,6 +15,9 @@ class LoginController extends Controller
    {
       // dd('autenticado');
 
+      // retorna null | on
+      // dd($request->remember);
+
       // Validacion
       $this->validate($request, [
          'email' => 'required|email',
@@ -22,7 +25,7 @@ class LoginController extends Controller
       ]);
 
       // si credenciales incorrectas
-      if(!auth()->attempt($request->only('email', 'password'))) {
+      if(!auth()->attempt($request->only('email', 'password'), $request->remember)) {
          return back()->with('mensaje', 'Usuario/Password incorrecto');
       }
 
