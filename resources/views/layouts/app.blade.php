@@ -8,6 +8,10 @@
       <title>Devstagram - @yield('titulo')</title>
       <script src="{{ asset('js/app.js') }}"></script>
 
+      {{-- Dropzone --}}
+      <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+      <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+
    </head>
    <body class="bg-gray-100">
 

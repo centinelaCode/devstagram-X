@@ -9,7 +9,8 @@
 @section('contenido')
    <div class="md:flex md:items-center">
       <div class="md:w-1/2 px-10">
-         Imagen Aquí
+         <form action="/xxx" id="dropzone" class="dropzone border-dash border-2 w-full h-96 rounded flex flex-col justify-center items-center"
+         ></form>
       </div>
 
       <div class="md:w-1/2 p-10 bg-white rounded-lg shadow-xl mt-10 md:mt-0">
